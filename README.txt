@@ -1,24 +1,18 @@
-See doc/index.html for more information.
+GLEW-CMake
+========
 
-If you downloaded the tarball from the GLEW website, you just need to:
+This is just a simple CMake version of GLEW, intended to make it easy to build 32/64 bit and shared/static versions of GLEW. It's mainly intended for use within [GFK](https://github.com/bschwind/gfk)
 
-    Unix:
+Dependencies
+-------------------
+- CMake
+- A working C++ compiler with C++11 support
+- OpenGL
+- X11 for Linux
 
-        make
-        
-        sudo -s
-        
-        make install
-        
-        make clean
-
-    Windows:
-
-        use the project file in build/vc6/
-
-If you wish to build GLEW from scratch (update the extension data from
-the net or add your own extension information), you need a Unix
-environment (including wget, perl, and GNU make).  The extension data
-is regenerated from the top level source directory with:
-
-        make extensions
+Build
+------
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make
